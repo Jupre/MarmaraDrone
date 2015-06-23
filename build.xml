@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="YADrone" default="dist" basedir=".">
+<project name="MarmaraDrone" default="dist" basedir=".">
 
 	<path id="dist.classpath">
 		<fileset dir="lib" includes="**/*.jar **/*.zip" />
@@ -51,7 +51,7 @@
 			<fileset dir="bin" includes="**/**" />
 			
 			<manifest>
-				<attribute name="Main-Class" value="gui_desktop.YADroneControlCenter"/>
+				<attribute name="Main-Class" value="gui_desktop.MarmaraDroneControlCenter"/>
 				<attribute name="Class-Path" value="${string.classpath}"/>
 			</manifest>
 		</jar>
@@ -62,7 +62,7 @@
 	</target>
 	
 	<target name="run" depends="dist" description="Run Control Center">
-		<java classname="gui_desktop.YADroneControlCenter" failonerror="true" fork="true">
+		<java classname="gui_desktop.MarmaraDroneControlCenter" failonerror="true" fork="true">
 			<classpath>
 				<fileset dir="dist" includes="*.jar" />
 			    <fileset dir="dist/lib" includes="*.jar" />
